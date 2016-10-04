@@ -52,7 +52,9 @@ print "your charisma is ", charisma
 
 race = raw_input ("what race do you want to play? ")
 print "Your character is a ", race
+print "Your characteristics now are:"
 
 
-dice = int (raw_input ("how many dice do you want to throw? "))
+dice = int raw_input ("how many dice do you want to throw? ")
 
+print dice
