@@ -45,7 +45,9 @@ ability["Charisma"] = d6(dc)
 print "lets define your Abilities"
 
 print "Your Abilities now are:"
-print ability
+
+for key in ability:
+	print key, ability[key]
 
 race = raw_input ("what race do you want to play? ")
 print "Your character is a ", race
@@ -77,4 +79,8 @@ if race == "Half-elf":
 	pass
 
 print "Your modified Abilities now are:"
-print ability
+
+for key in ability: 
+	print key, ability[key]
+
+
