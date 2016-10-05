@@ -34,27 +34,47 @@ def afficher(arg):
 	print arg
 
 dc=4
-strength = d6(dc)
-dexterity = d6(dc)
-constitution = d6(dc)
-intelligence = d6(dc)
-wisdom = d6(dc)
-charisma = d6(dc)
+ability = {}
+ability["Strength"] = d6(dc)
+ability["Dexterity"] = d6(dc)
+ability["Constitution"] = d6(dc)
+ability["Intelligence"] = d6(dc)
+ability["Wisdom"] = d6(dc)
+ability["Charisma"] = d6(dc)
 
-print "lets define your characteristics"
+print "lets define your Abilities"
 
-print "your strength is ", strength
-print "your dexterity is ", dexterity
-print "your constitution is ", constitution
-print "your intelligence is ", intelligence
-print "your wisdom is ", wisdom
-print "your charisma is ", charisma
+print "Your Abilities now are:"
+print ability
 
 race = raw_input ("what race do you want to play? ")
 print "Your character is a ", race
-print "Your characteristics now are:"
 
+if race == "Elf":
+	ability["Dexterity"] += 2
+	ability["Constitution"] -= 2
 
-dice = int raw_input ("how many dice do you want to throw? ")
+if race == "Dwarf": 
+	ability["Constitution"] += 2
+	ability["Charisma"] -= 2
 
-print dice
+if race == "Gnome":
+	ability["Constitution"] += 2
+	ability["Strength"] -= 2
+
+if race == "Half-orc":
+	ability["Strength"] += 2
+	ability["Intelligence"] -= 2
+	ability["Charisma"] -= 2
+
+if race == "Halfling":
+	ability["Dexterity"] += 2
+	ability["Strength"] -= 2
+
+if race == "Human":
+	pass
+if race == "Half-elf":
+	pass
+
+print "Your modified Abilities now are:"
+print ability
