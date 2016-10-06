@@ -2,14 +2,23 @@ import random
 
 #dice time
 
-def d2 () :
-	return random.randint(1,2)
+def d2 (count) :
+	somme = 0 
+	for _ in range(count):
+		somme = somme + random.randint(1,2)
+	return somme
 
-def d3 () :
-	return random.randint(1,3)
+def d3 (count) :
+	somme = 0 
+	for _ in range(count):
+		somme = somme + random.randint(1,3)
+	return somme
 
-def d4 () :
-	return random.randint(1,4)
+def d4 (count) :
+	somme = 0 
+	for _ in range(count):
+		somme = somme + random.randint(1,4)
+	return somme
 
 def d6 (count) :
 	somme = 0 
@@ -18,29 +27,49 @@ def d6 (count) :
 	return somme
 
 
-def d8 () :
-	return random.randint(1,8)
+def d8 (count) :
+	somme = 0 
+	for _ in range(count):
+		somme = somme + random.randint(1,8)
+	return somme
 
-def d10 () :
-	return random.randint(1,10)
+def d10 (count) :
+	somme = 0 
+	for _ in range(count):
+		somme = somme + random.randint(1,10)
+	return somme
 
-def d12 () :
-	return random.randint(1,12)
+def d12 (count) :
+	somme = 0 
+	for _ in range(count):
+		somme = somme + random.randint(1,12)
+	return somme
 
-def d20 () :
-	return random.randint(1,20)
+def d20 (count) :
+	somme = 0 
+	for _ in range(count):
+		somme = somme + random.randint(1,20)
+	return somme
 
 def afficher(arg):
 	print arg
 
 dc=4
-ability = {}
-ability["Strength"] = d6(dc)
-ability["Dexterity"] = d6(dc)
-ability["Constitution"] = d6(dc)
-ability["Intelligence"] = d6(dc)
-ability["Wisdom"] = d6(dc)
-ability["Charisma"] = d6(dc)
+abilities = {}
+abilities["Strength"] = d6(dc), 
+abilities["Dexterity"] = d6(dc)
+abilities["Constitution"] = d6(dc)
+abilities["Intelligence"] = d6(dc)
+abilities["Wisdom"] = d6(dc)
+abilities["Charisma"] = d6(dc)
+
+
+modifier = {}
+modifier["Strength"] = (abilities["Strength"]/2) - 5
+
+
+
+modif = (ability/2) - 5
 
 print "lets define your Abilities"
 
